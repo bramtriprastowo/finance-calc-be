@@ -10,7 +10,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
     username: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
-    entities: ['dist/**/*.entity{.ts, .js}'],
+    entities: ['dist/**/*.entity.{ts,js}'],
     synchronize: true, // in development true --> Indicates if database schema should be auto created on every application launch
     dropSchema: false, // Drops the schema each time data source is being initialized
     logging: true,
