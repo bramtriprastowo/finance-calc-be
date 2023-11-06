@@ -28,6 +28,14 @@ export class userService {
 		return this.userRepository.find();
 	}
 
+	async findByEmail(email: string) {
+		return this.userRepository.findOneBy({ email: email });
+	}
+
+	async findByUsername(username: string) {
+		return this.userRepository.findOneBy({ username: username });
+	}
+
 	async findByEmailOrUsername(emailOrUsername: string) {
 		return this.userRepository.findOne({
 			where: [

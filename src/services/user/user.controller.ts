@@ -25,4 +25,9 @@ export class UserController {
     async remove(@Param('id') id: string){
         return this.userService.removeById(id);
     }
+
+    @Get('findall')
+    async findall() {
+        return this.userService.findAll();
+    }
 }
